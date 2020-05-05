@@ -8,7 +8,6 @@ exports.createPages = async ({ graphql, actions }) => {
   const authorPage = path.resolve(`./src/templates/author-page.js`)
 
   for (let author of Object.keys(authorJson)) {
-    console.log(author)
     createPage({
       path: `/author/${author}`,
       component: authorPage,

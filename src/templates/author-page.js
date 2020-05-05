@@ -40,6 +40,7 @@ const AuthorPage = ({ data, pageContext, location }) => {
                 postPath={node.fields.postPath}
                 title={title}
                 description={node.frontmatter.description}
+                identifier={pageContext.author}
                 excerpt={node.excerpt}
             />
             )
