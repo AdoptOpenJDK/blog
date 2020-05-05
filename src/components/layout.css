@@ -39,7 +39,7 @@ body {
     color: #152935;
 }
 
-.fa-stack {
+.fa-layers {
     border-radius: 50px;
     box-sizing: border-box;
     border: 1px solid transparent;
@@ -48,7 +48,7 @@ body {
     opacity: 0.5;
 }
 
-.fa-stack:hover {
+.fa-layers:hover {
     background: #fff;
     border-color: #000;
     opacity: 1;
@@ -73,6 +73,17 @@ body {
     text-decoration: none;
     box-shadow: none;
 }
+
+.fa-layers {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+    font-size:1.10em;
+}
+
 
 /* Mobile specific css */
 @media (max-width : 650px) {

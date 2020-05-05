@@ -8,10 +8,11 @@ const SocialBar = () => {
         <a
           href="https://twitter.com/adoptopenjdk"
           target="_blank"
+          rel="noopener noreferrer"
           className="light-link no-underline"
         >
-          <span className="fa-stack fa-lg" style={{ fontSize: "1.10em" }}>
-            <i className="fa fa-twitter fa-stack-1x fa-social-icon" />
+          <span className="fa-layers fa-fw">
+            <FontAwesomeIcon className="fa-social-icon" size="1x" icon={["fab", "twitter"]} />
           </span>
         </a>
       </div>
@@ -19,10 +20,11 @@ const SocialBar = () => {
         <a
           href="https://www.facebook.com/adoptopenjdk"
           target="_blank"
+          rel="noopener noreferrer"
           className="light-link no-underline"
         >
-          <span className="fa-stack fa-lg" style={{ fontSize: "1.10em" }}>
-            <i className="fa fa-facebook fa-stack-1x fa-social-icon" />
+          <span className="fa-layers fa-fw">
+            <FontAwesomeIcon className="fa-social-icon" size="1x" icon={["fab", "facebook"]} />
           </span>
         </a>
       </div>
@@ -30,10 +32,11 @@ const SocialBar = () => {
         <a
           href="https://www.youtube.com/c/AdoptOpenJDK"
           target="_blank"
+          rel="noopener noreferrer"
           className="light-link no-underline"
         >
-          <span className="fa-stack fa-lg" style={{ fontSize: "1.10em" }}>
-            <i className="fa fa-youtube-play fa-stack-1x fa-social-icon" />
+          <span className="fa-layers fa-fw">
+            <FontAwesomeIcon className="fa-social-icon" size="1x" icon={["fab", "youtube"]} />
           </span>
         </a>
       </div>
@@ -41,10 +44,11 @@ const SocialBar = () => {
         <a
           href="https://www.twitch.tv/adoptopenjdk"
           target="_blank"
+          rel="noopener noreferrer"
           className="light-link no-underline"
         >
-          <span className="fa-stack fa-lg" style={{ fontSize: "1.10em" }}>
-            <i className="fa fa-twitch fa-stack-1x fa-social-icon" />
+          <span className="fa-layers fa-fw">
+            <FontAwesomeIcon className="fa-social-icon" size="1x" icon={["fab", "twitch"]} />
           </span>
         </a>
       </div>
