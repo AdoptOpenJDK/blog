@@ -16,8 +16,6 @@ const ArticlePreview = (props) => {
   const excerpt = props.excerpt
   const identifier = props.identifier
 
-  console.log(identifier)
-
   return (
     <article>
       <header>
