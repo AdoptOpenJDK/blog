@@ -1,16 +1,16 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
+import React from "react";
+import { Link, graphql } from "gatsby";
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import AuthorData from '../../content/authors.json';
-import ArticlePreview from '../components/articlepreview';
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import AuthorData from "../../content/authors.json";
+import ArticlePreview from "../components/articlepreview";
 
 const BlogPage = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMdx.edges;
   const { currentPageNumber, previousPageNumber, nextPageNumber } = pageContext;
-  const previousPageLink = previousPageNumber === 1 ? '/' : `/page/${previousPageNumber}`;
+  const previousPageLink = previousPageNumber === 1 ? "/" : `/page/${previousPageNumber}`;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -35,10 +35,10 @@ const BlogPage = ({ data, pageContext, location }) => {
       <nav>
         <ul
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            listStyle: 'none',
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            listStyle: "none",
             padding: 0,
           }}
         >

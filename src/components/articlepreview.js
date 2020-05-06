@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from "react";
+import { Link } from "gatsby";
 
-import Byline from './byline';
-import { rhythm } from '../utils/typography';
+import Byline from "./byline";
+import { rhythm } from "../utils/typography";
 
 /**
  * Article intro displayed on front page, archive, author page.
@@ -24,7 +24,7 @@ const ArticlePreview = (props) => {
             marginBottom: rhythm(1 / 4),
           }}
         >
-          <Link style={{ boxShadow: 'none' }} to={postPath}>
+          <Link style={{ boxShadow: "none" }} to={postPath}>
             {title}
           </Link>
         </h3>

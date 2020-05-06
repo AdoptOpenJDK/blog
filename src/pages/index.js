@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
+import React from "react";
+import { Link, graphql } from "gatsby";
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import AuthorData from '../../content/authors.json';
-import ArticlePreview from '../components/articlepreview';
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import AuthorData from "../../content/authors.json";
+import ArticlePreview from "../components/articlepreview";
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -33,11 +33,11 @@ const BlogIndex = ({ data, location }) => {
       <nav>
         <ul
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            flexDirection: 'row-reverse',
-            listStyle: 'none',
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            flexDirection: "row-reverse",
+            listStyle: "none",
             padding: 0,
           }}
         >

@@ -1,12 +1,12 @@
-import React from 'react';
-import { graphql } from 'gatsby';
+import React from "react";
+import { graphql } from "gatsby";
 
-import AuthorBio from '../components/authorbio';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import AuthorData from '../../content/authors.json';
-import ArticlePreview from '../components/articlepreview';
-import { rhythm } from '../utils/typography';
+import AuthorBio from "../components/authorbio";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import AuthorData from "../../content/authors.json";
+import ArticlePreview from "../components/articlepreview";
+import { rhythm } from "../utils/typography";
 
 
 const AuthorPage = ({ data, pageContext, location }) => {

@@ -1,5 +1,5 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SocialBar = () => {
   return (
@@ -12,7 +12,7 @@ const SocialBar = () => {
           className="light-link no-underline"
         >
           <span className="fa-layers fa-fw">
-            <FontAwesomeIcon className="fa-social-icon" size="1x" icon={['fab', 'twitter']} />
+            <FontAwesomeIcon className="fa-social-icon" size="1x" icon={["fab", "twitter"]} />
           </span>
         </a>
       </div>
@@ -24,7 +24,7 @@ const SocialBar = () => {
           className="light-link no-underline"
         >
           <span className="fa-layers fa-fw">
-            <FontAwesomeIcon className="fa-social-icon" size="1x" icon={['fab', 'facebook']} />
+            <FontAwesomeIcon className="fa-social-icon" size="1x" icon={["fab", "facebook"]} />
           </span>
         </a>
       </div>
@@ -36,7 +36,7 @@ const SocialBar = () => {
           className="light-link no-underline"
         >
           <span className="fa-layers fa-fw">
-            <FontAwesomeIcon className="fa-social-icon" size="1x" icon={['fab', 'youtube']} />
+            <FontAwesomeIcon className="fa-social-icon" size="1x" icon={["fab", "youtube"]} />
           </span>
         </a>
       </div>
@@ -48,7 +48,7 @@ const SocialBar = () => {
           className="light-link no-underline"
         >
           <span className="fa-layers fa-fw">
-            <FontAwesomeIcon className="fa-social-icon" size="1x" icon={['fab', 'twitch']} />
+            <FontAwesomeIcon className="fa-social-icon" size="1x" icon={["fab", "twitch"]} />
           </span>
         </a>
       </div>

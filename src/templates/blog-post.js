@@ -1,15 +1,15 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { MDXProvider } from '@mdx-js/react';
+import React from "react";
+import { Link, graphql } from "gatsby";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import { MDXProvider } from "@mdx-js/react";
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import Author from '../components/author';
-import { rhythm } from '../utils/typography';
-import AuthorData from '../../content/authors.json';
-import GuestPost from '../components/guestpost';
-import Byline from '../components/byline';
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import Author from "../components/author";
+import { rhythm } from "../utils/typography";
+import AuthorData from "../../content/authors.json";
+import GuestPost from "../components/guestpost";
+import Byline from "../components/byline";
 
 const components = {
   GuestPost
@@ -63,10 +63,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <nav>
         <ul
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            listStyle: 'none',
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            listStyle: "none",
             padding: 0,
           }}
         >
