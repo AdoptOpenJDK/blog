@@ -12,82 +12,82 @@ import GuestPost from '../components/guestpost';
 import Byline from '../components/byline';
 
 const components = {
-    GuestPost
+  GuestPost
 };
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
-    const post = data.mdx;
-    const siteTitle = data.site.siteMetadata.title;
-    const { previous, next } = pageContext;
-    const author = AuthorData[post.frontmatter.author];
+  const post = data.mdx;
+  const siteTitle = data.site.siteMetadata.title;
+  const { previous, next } = pageContext;
+  const author = AuthorData[post.frontmatter.author];
 
-    return (
-        <Layout location={location} title={siteTitle}>
-            <SEO
-                title={post.frontmatter.title}
-                description={post.frontmatter.description || post.excerpt}
-            />
-            <article>
-                <header>
-                    <h1
-                        style={{
-                            marginTop: rhythm(1),
-                            marginBottom: 0,
-                        }}
-                    >
-                        {post.frontmatter.title}
-                    </h1>
-                    <p
-                        // style={{
-                        //   // eslint-disable-line
-                        //   ...scale(1 / 5),
-                        //   display: `block`,
-                        // }}
-                    >
-                    </p>
-                    <Byline date={post.frontmatter.date} author={author.name} identifier={post.frontmatter.author} />
-                </header>
-                <MDXProvider components={components}>
-                    <MDXRenderer>{post.body}</MDXRenderer>
-                </MDXProvider>
-                <hr
-                    style={{
-                        marginBottom: rhythm(1),
-                    }}
-                />
-                <footer>
-                    <Author identifier={post.frontmatter.author} author={author} />
-                </footer>
-            </article>
+  return (
+    <Layout location={location} title={siteTitle}>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      />
+      <article>
+        <header>
+          <h1
+            style={{
+              marginTop: rhythm(1),
+              marginBottom: 0,
+            }}
+          >
+            {post.frontmatter.title}
+          </h1>
+          <p
+            // style={{
+            //   // eslint-disable-line
+            //   ...scale(1 / 5),
+            //   display: `block`,
+            // }}
+          >
+          </p>
+          <Byline date={post.frontmatter.date} author={author.name} identifier={post.frontmatter.author} />
+        </header>
+        <MDXProvider components={components}>
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </MDXProvider>
+        <hr
+          style={{
+            marginBottom: rhythm(1),
+          }}
+        />
+        <footer>
+          <Author identifier={post.frontmatter.author} author={author} />
+        </footer>
+      </article>
 
-            <nav>
-                <ul
-                    style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'space-between',
-                        listStyle: 'none',
-                        padding: 0,
-                    }}
-                >
-                    <li>
-                        {next && (
-                            <Link to={next.fields.postPath} rel="next">
+      <nav>
+        <ul
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            listStyle: 'none',
+            padding: 0,
+          }}
+        >
+          <li>
+            {next && (
+              <Link to={next.fields.postPath} rel="next">
                 ← {next.frontmatter.title}
-                            </Link>
-                        )}
-                    </li>
-                    <li>
-                        {previous && (
-                            <Link to={previous.fields.postPath} rel="prev">
-                                {previous.frontmatter.title} →
-                            </Link>
-                        )}
-                    </li>
-                </ul>
-            </nav>
-        </Layout>
-    );
+              </Link>
+            )}
+          </li>
+          <li>
+            {previous && (
+              <Link to={previous.fields.postPath} rel="prev">
+                {previous.frontmatter.title} →
+              </Link>
+            )}
+          </li>
+        </ul>
+      </nav>
+    </Layout>
+  );
 };
 
 export default BlogPostTemplate;
