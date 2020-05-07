@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Radium from "radium";
+import { css } from "glamor";
 
 const socialIconStyle = {
   position: "absolute",
@@ -8,7 +8,7 @@ const socialIconStyle = {
   right: 0
 };
 
-const faLayerStyle = {
+const faLayerStyleHover = css({
   width: "2em",
   height: "2em",
   fontSize: "1.1em",
@@ -16,8 +16,11 @@ const faLayerStyle = {
   background: "#ffffff",
   opacity: 0.5,
   transition: "0.5s",
-  ":hover": { opacity: 1 }
-};
+  ":hover": {
+    opacity: 1,
+    transform: "scale(1.2)"
+  },
+});
 
 const faSocialIconStyle = {
   color: "#152935"
@@ -34,7 +37,7 @@ const SocialBar = () => {
             rel="noopener noreferrer"
             className="light-link no-underline"
           >
-            <span key="twitter" className="fa-layers fa-fw" style={faLayerStyle} >
+            <span className={`${faLayerStyleHover} fa-layers`}>
               <FontAwesomeIcon className="fa-social-icon" size="1x" icon={["fab", "twitter"]} style={faSocialIconStyle} />
             </span>
           </a>
@@ -46,7 +49,7 @@ const SocialBar = () => {
             rel="noopener noreferrer"
             className="light-link no-underline"
           >
-            <span key="facebook" className="fa-layers fa-fw" style={faLayerStyle} >
+            <span className={`${faLayerStyleHover} fa-layers`}>
               <FontAwesomeIcon className="fa-social-icon" size="1x" icon={["fab", "facebook"]} style={faSocialIconStyle} />
             </span>
           </a>
@@ -58,7 +61,7 @@ const SocialBar = () => {
             rel="noopener noreferrer"
             className="light-link no-underline"
           >
-            <span key="youtube" className="fa-layers fa-fw" style={faLayerStyle} >
+            <span className={`${faLayerStyleHover} fa-layers`}>
               <FontAwesomeIcon className="fa-social-icon" size="1x" icon={["fab", "youtube"]} style={faSocialIconStyle}/>
             </span>
           </a>
@@ -70,7 +73,7 @@ const SocialBar = () => {
             rel="noopener noreferrer"
             className="light-link no-underline"
           >
-            <span key="twitch" className="fa-layers fa-fw" style={faLayerStyle} >
+            <span className={`${faLayerStyleHover} fa-layers`}>
               <FontAwesomeIcon className="fa-social-icon" size="1x" icon={["fab", "twitch"]} style={faSocialIconStyle} />
             </span>
           </a>
@@ -80,4 +83,4 @@ const SocialBar = () => {
   );
 };
 
-export default Radium(SocialBar);
+export default SocialBar;
