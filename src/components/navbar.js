@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, withPrefix } from "gatsby";
 
+import Background from "../images/background.png";
 import SocialBar from "./socialbar";
 
 const NavBar = (location) => {
@@ -26,7 +27,7 @@ const NavBar = (location) => {
   }
 
   return (
-    <header id="site-header-main" style={{ display: "flex", backgroundColor: "#152935", background: "url(https://adoptopenjdk.net/dist/assets/background.png)", justifyContent: "center", alignItems: "center", height: "6em"}}>
+    <header id="site-header-main" style={{ display: "flex", backgroundColor: "#152935", backgroundImage: `url(${Background})`, justifyContent: "center", alignItems: "center", height: "6em"}}>
       {header}
       <SocialBar />
     </header>
