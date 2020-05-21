@@ -38,7 +38,7 @@ xcrun altool --notarization-info <RequestUUID> --username "<email>" --password "
 
 If all goes well then you will see `Status Message: Package Approved`. But unfortunately this won’t be enough for most users. ([see codesigning instructions below](#you-codesign-your-runtime-already))
 
-### You codesign your runtime already
+### <a name="you-codesign-your-runtime-already"></a>You codesign your runtime already
 If you already codesign your runtime then you will already be familiar with the following command:
 
 ```bash
@@ -114,4 +114,4 @@ source=Notarized Developer ID
 The `Notarized Developer ID` line indicates that the installer is fully notarized.
 
 ## Other Problems:
-- Apple notarization requires the binary to have been compiled on Xcode 9 or later. This may not be an issue for you but if you see warnings about algorithms being unsupported when you notarize you will need upgrade your compiler.
+- Apple notarization requires the binary to have been compiled on Xcode 9 or later. This may not be an issue for you but if you see warnings about algorithms being unsupported when you notarize you will need to upgrade your compiler.
