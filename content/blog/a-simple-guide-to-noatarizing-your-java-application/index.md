@@ -80,7 +80,7 @@ You must also now specify `--options runtime` in order to enable hardened runtim
 
 
 ## Code has no resources but signature indicates that they are present?
-Several people have rasied issues at AdoptOpenJDK about the following codesign error when they try to bundle our binary:
+Several people have raised issues at AdoptOpenJDK about the following codesign error when they try to bundle our binary:
 
 ```bash
 codesign --verify Contents/MacOS/libjli.dylib 
