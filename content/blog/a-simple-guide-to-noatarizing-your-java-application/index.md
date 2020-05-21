@@ -1,5 +1,5 @@
 ---
-title: A simple guide to notarzing your Java application
+title: A simple guide to notarizing your Java application
 date: "2020-05-21T12:00:00+00:00"
 author: georgeadams
 description: Apple has recently changed the requirements for applications to install on macOS 10.15 and above.
