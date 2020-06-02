@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 
 import Byline from "./byline";
-import Tags from "./tags";
-
 import { rhythm } from "../utils/typography";
 
 /**
@@ -17,7 +15,6 @@ const ArticlePreview = (props) => {
   const description = props.description;
   const excerpt = props.excerpt;
   const identifier = props.identifier;
-  const tags = props.tags;
 
   return (
     <article>
@@ -32,7 +29,6 @@ const ArticlePreview = (props) => {
           </Link>
         </h3>
         <Byline author={author} date={date} identifier={identifier}/>
-        <Tags tags={tags}/>
       </header>
       <section>
         <p>
