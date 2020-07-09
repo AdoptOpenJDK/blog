@@ -20,7 +20,7 @@ AdoptOpenJDK is rapidly becoming a leading provider of OpenJDK™ binaries. With
 ## Speakers
 **George Adams** is the Java Program Manager at Microsoft and is the recently appointed chair of the Technical Steering Committee at AdoptOpenJDK. Since co-founding AdoptOpenJDK in 2016 he has been leading the community outreach efforts at AdoptOpenJDK and is heavily involved in the Java ecosystem. George also contributes to both the OpenJS Foundation and the Node.js Foundation where he is a core collaborator and plays an active role in several of the workgroups.
 
-**Hendrik Ebbers** is a co-founder of Karakun AG and lives in Dortmund, Germany. He is the founder and leader of the Java User Group Dortmund and gives talks and presentations in user groups and conferences. His JavaFX book "Mastering JavaFX 8 Controls" was released 2014 by Oracle press. Hendrik is JavaOne Rockstar, JSR expert group member and Java Champion. Hendrik is member of the AdoptOpenJDK TSC.
+**Hendrik Ebbers** is a co-founder of Karakun AG and lives in Dortmund, Germany. He is the founder and leader of the Java User Group Dortmund and gives talks and presentations in user groups and conferences. His JavaFX book "Mastering JavaFX 8 Controls" was released in 2014 by Oracle press. Hendrik is a JavaOne Rockstar, JSR expert group member and Java Champion. Hendrik is member of the AdoptOpenJDK TSC.
 
 ## Scheduled Events
 | Date | JUG | Link |
