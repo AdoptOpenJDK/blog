@@ -2,12 +2,12 @@
 title: AdoptOpenJDK 8u262, 11.0.8, and 14.0.8 Available
 date: "2020-07-16T12:00:00+00:00"
 author: andreasahlenstorf
-description: AdoptOpenJDK is happy to announce the immediate availability of AdoptOpenJDK 8u262, 11.0.8, and 14.0.2, both with OpenJDK HotSpot and Eclipse OpenJ9. As always, all binaries are thoroughly tested and available free of charge without usage restrictions on a wide range of platforms.
+description: AdoptOpenJDK is happy to announce the immediate availability of AdoptOpenJDK 8u262, 11.0.8, and 14.0.2. Binaries are available for download of OpenJDK and Eclipse OpenJ9 (with OpenJDK class libraries). As always, all binaries are thoroughly tested and available free of charge without usage restrictions on a wide range of platforms.
 tags:
   - announcement
 ---
 
-AdoptOpenJDK is happy to announce the immediate availability of AdoptOpenJDK 8u262, 11.0.8, and 14.0.2, both with [OpenJDK HotSpot](https://openjdk.java.net/groups/hotspot/) and [Eclipse OpenJ9](https://www.eclipse.org/openj9/). As always, all binaries are thoroughly tested (except 32-bit ARM, see below) and available free of charge without usage restrictions on a wide range of platforms.
+AdoptOpenJDK is happy to announce the immediate availability of AdoptOpenJDK 8u262, 11.0.8, and 14.0.2. Binaries are available for download of OpenJDK and Eclipse OpenJ9 (with OpenJDK class libraries). As always, all binaries are thoroughly tested (except 32-bit ARM, see below) and available free of charge without usage restrictions on a wide range of platforms.
 
 * [List of security fixes and other fixes in OpenJDK 8u262](https://bugs.openjdk.java.net/browse/JDK-8248399?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%20openjdk8u262%20ORDER%20BY%20created%20DESC)
 
