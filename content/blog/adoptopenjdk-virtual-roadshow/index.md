@@ -28,7 +28,7 @@ AdoptOpenJDK is the leading provider of OpenJDK™ binaries. With over 170 milli
 ## Scheduled Events
 | Date | JUG | Link |
 |---|---|---|
-| 21/07/ 2020 18:30 EDT | Knoxville JUG  |  https://www.meetup.com/de-DE/KnoxJava/events/nmfmbrybckbcc/ |
+| 21/07/ 2020 18:30 EDT | Knoxville JUG  |  https://www.meetup.com/KnoxJava/events/nmfmbrybckbcc/ |
 | 06/08/2020  19:00 GMT+3 | JUG Istanbul |  https://www.meetup.com/de-DE/Istanbul-Java-User-Group/events/271767087 |  
 | 11/08/2020  11:00 EDT | Connecticut JUG  | tbd | https://www.meetup.com/Connecticut-Java-Users-Group/events/271934054/
 | 12/08/2020 | JUG Switzerland  | tbd |
