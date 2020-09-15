@@ -31,16 +31,6 @@ AdoptOpenJDK is happy to announce the immediate availability of AdoptOpenJDK 15.
 * [JEP 384 started another preview round for Records](https://openjdk.java.net/jeps/384).
 * [JEP 385 deprecated RMI activation](https://openjdk.java.net/jeps/385).
 
-### New CA Certificates
-
-When you open a TLS-protected (SSL) connection to a server, your client (web browser, Java program, etc.) has to validate the server's certificate. By default, only certificates signed by a trusted Certificate Authority (CA) are accepted. If you open a connection to a server whose certificate is not signed or signed by a CA that is not trusted, the client refuses to open the connection and display a warning.
-
-The list of trusted CAs is usually managed by the vendor of your operating system, for example, Microsoft (for Windows) or Apple (for macOS). With Java, it is a bit different: By default, Java does not rely on the operating system's list of trusted CA certificates. Instead, it has its own list stored in a file called `cacerts` that is bundled with Java. Up until now, AdoptOpenJDK shipped the `cacerts` file maintained by the OpenJDK project. Unfortunately, it does not contain many popular CAs that are trusted by all major browsers. Many users of AdoptOpenJDK were surprised to learn that they could connect to a server with their browser but not with AdoptOpenJDK.
-
-With AdoptOpenJDK 15, this is changing. AdoptOpenJDK switched to the CA program managed by the Mozilla Foundation. As a user, you can now be sure that if a website opens in Firefox, it will open with AdoptOpenJDK, too. The CA program managed by the Mozilla Foundation is widely accepted and well regarded for its high security standards.
-
-This change will be incorporated into all future releases of AdoptOpenJDK, including AdoptOpenJDK 8 and 11. Nightly builds of both versions already contain the new CA certificates.
-
 ### Removal of Client VM from Builds for Windows/x64
 
 For compatibility reasons, AdoptOpenJDK bundled both the Client VM and Server VM with its builds for Windows/x64. We have been one of the last vendors to do so. With AdoptOpenJDK 15, we have dropped the Client VM on Windows/x64, too. On Windows/x64, the Server VM is the superior choice for all workloads. Furthermore, continuing to bundle the Client VM would have resulted in a reduced feature set for the users of the Server VM.
