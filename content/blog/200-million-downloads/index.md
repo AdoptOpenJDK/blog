@@ -21,7 +21,7 @@ The project is eternally grateful for the ongoing support from the Java ecosyste
 
 Tracking our downloads has never been easier thanks to our new [Download Dashboard](https://dash-v2.adoptopenjdk.net/). For example we are able to breakdown our downloads by source:
 
-![Download Pie Chart](./pie_chart.png)
+![Pie chart displaying the distribution of AdoptOpenJDK downloads by source: 2/3 GitHub, 1/3 Docker pulls](./pie_chart.png)
 
 We are also able to breakdown our downloads by major version:
 
