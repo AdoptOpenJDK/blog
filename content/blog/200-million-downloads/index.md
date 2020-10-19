@@ -25,7 +25,7 @@ Tracking our downloads has never been easier thanks to our new [Download Dashboa
 
 We are also able to breakdown our downloads by major version:
 
-![Download Bar Chart](./bar_chart.png)
+![Bar chart displaying the distribution of AdoptOpenJDK by version](./bar_chart.png)
 
 As you can see, OpenJDK 8 is still the most downloaded binary of all time, BUT not for long now because OpenJDK 11 consitently gets more downloads than OpenJDK 8 each day.
 
