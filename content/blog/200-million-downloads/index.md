@@ -1,5 +1,5 @@
 ---
-title: AdoptOpenJDK reaches 200 million downloads
+title: AdoptOpenJDK Reaches 200 Million Downloads
 date: "2020-10-19T09:00:00+00:00"
 author: georgeadams
 description: Today the AdoptOpenJDK project celebrates another huge milestone.
