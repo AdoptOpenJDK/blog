@@ -25,7 +25,7 @@ The [OpenJDK project added support for TLS 1.3 to OpenJDK 8](https://bugs.openjd
 
 ### CentOS/RHEL 6 Support Restored in AdoptOpenJDK 15
 
-AdoptOpenJDK 15.0.1 will work on CentOS and Red Hat Enterprise Linux 6, again, by requiring only glibc 2.12 or newer. [AdoptOpenJDK 15 that we released last month only works on CentOS and Red Hat Enterprise Linux 7 because it required a more recent version of glibc](https://github.com/AdoptOpenJDK/openjdk-build/issues/2097).
+AdoptOpenJDK 15.0.1 will work on CentOS and Red Hat Enterprise Linux 6, again, by requiring only glibc 2.12 or newer. [AdoptOpenJDK 15 that we released last month only works on CentOS and Red Hat Enterprise Linux 7 because it required a more recent version of glibc](https://github.com/AdoptOpenJDK/openjdk-build/issues/2097). This change does not affect OpenJ9 which [supports only CentOS and Red Hat Enterprise Linux 7 and newer](https://www.eclipse.org/openj9/docs/openj9_support/).
 
 Dropping support for glibc 2.12 was a misjudgement by us prompted by the fast-approaching [end of life date for CentOS 6 on 30th November 2020](https://wiki.centos.org/About/Product), which we use for building and testing all OpenJDK versions. We promise to find a way to continue supporting systems with glibc 2.12 or newer [as long as OpenJDK supports it](https://wiki.openjdk.java.net/display/Build/Supported+Build+Platforms). We apologize to everyone that was impacted by our mistake.
 
