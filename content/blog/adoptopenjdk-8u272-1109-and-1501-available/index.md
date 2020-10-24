@@ -1,6 +1,6 @@
 ---
 title: AdoptOpenJDK 8u272, 11.0.9, and 15.0.1 Available
-date: "2020-10-22T12:00:00+00:00"
+date: "2020-10-24T12:00:00+00:00"
 author: andreasahlenstorf
 description: AdoptOpenJDK is happy to announce the immediate availability of AdoptOpenJDK 8u272, 11.0.9, and 15.0.1. Binaries are available for download of OpenJDK and Eclipse OpenJ9 (with OpenJDK class libraries). As always, all binaries are thoroughly tested and available free of charge without usage restrictions on a wide range of platforms.
 tags:
@@ -34,3 +34,7 @@ Dropping support for glibc 2.12 was a misjudgement by us prompted by the fast-ap
 The Shenandoah Garbage Collector was backported to OpenJDK 11 by the OpenJDK project and is available from AdoptOpenJDK 11.0.9 onwards ([issue](https://github.com/AdoptOpenJDK/openjdk-build/issues/2114)). The supported platforms are x86_64, x86, and aarch64. Shenandoah is a low pause time garbage collector that reduces GC pause times by performing more garbage collection work concurrently with the running Java program. Please see [the OpenJDK wiki page on Shenandoah for details](https://wiki.openjdk.java.net/display/shenandoah/Main).
 
 [Shenandoah was introduced with OpenJDK 12 (JEP 189)](https://openjdk.java.net/jeps/189) and has since been enabled in AdoptOpenJDK. We do not offer Shenandoah in OpenJDK 8 because it is not part of the mainline OpenJDK codebase. If you need Shenandoah on OpenJDK 8, please use [a binary built by Red Hat](https://developers.redhat.com/products/openjdk/overview).
+
+### AdoptOpenJDK 8u272 for Solaris Not Ready
+
+Due to [JDK-8255003](https://bugs.openjdk.java.net/browse/JDK-8255003), there is no AdoptOpenJDK 8u272 for Solaris yet, because it cannot be built successfully. A patch is currently being reviewed, which should allow us to build and ship AdoptOpenJDK 8u272 for Solaris soon.
