@@ -8,6 +8,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
+      
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10'
     
     - name: Install Gatsby CLI
       run: npm install -g gatsby-cli
