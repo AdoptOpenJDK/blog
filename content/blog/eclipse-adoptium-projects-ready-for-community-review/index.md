@@ -1,0 +1,31 @@
+---
+title: Eclipse Adoptium Projects Ready for Community Review
+date: "2020-12-22T09:00:00+00:00"
+author: tsc
+description: Community Review is the last step before we can officially start Eclipse Adoptium. It gives all of you an opportunity to ask questions, suggest improvements, or raise concerns. We also have an update to our transition roadmap.
+tags:
+  - AdoptOpenJDK
+  - Eclipse
+  - Foundation
+---
+
+Six months ago, we announced that AdoptOpenJDK is going to join the Eclipse Foundation and rebrand as Eclipse Adoptium. After a long period of work behind the scenes, the first batch of project proposals is ready for [community review](https://www.eclipse.org/projects/dev_process/#6_2_2_Proposal):
+
+* [Eclipse AQAvit Project Proposal](https://projects.eclipse.org/proposals/eclipse-aqavit)
+* [Eclipse Temurin Project Proposal](https://projects.eclipse.org/proposals/eclipse-temurin)
+* [Eclipse Temurin Compliance Project Proposal](https://projects.eclipse.org/proposals/eclipse-temurin-compliance)
+
+This means that we are looking for your feedback on those proposals to refine and enhance them. If you are already a member of the Eclipse Foundation, please communicate your feedback via the forms on the project pages linked above. Everyone else can [comment on our GitHub issue that collects feedback about our move to the Eclipse Foundation](https://github.com/AdoptOpenJDK/TSC/issues/160).
+
+The community review is an important step towards the creation of the projects and the last one before the formal start of the incubation phase. The objective of the incubation phase is to actually set up the projects and their infrastructure. The incubation ends with the first formal release.
+
+At the Eclipse Foundation, the monolithic AdoptOpenJDK project will be split into multiple sub-projects under the umbrella of the Eclipse Adoptium Top Level Project:
+
+* **Eclipse AQAvit** encompasses all our activities around testing, especially the development of our [AQA test suite](/2019/07/the-first-drop-introducing-adoptopenjdk-quality-assurance-aqa-v1-0/).
+* **Eclipse Temurin** (an anagram of "runtime") focuses on building and releasing JDKs (that part that most associate with AdoptOpenJDK)
+
+AdoptOpenJDK's application to become an Eclipse project was approved under the provision that we only release binaries that have passed the respective TCK. The [TCK for Java SE](https://openjdk.java.net/groups/conformance/JckAccess/) is a proprietary technology of Oracle and to be kept secret -- something that is in stark contrast to the spirit of open source. The Eclipse Foundation and AdoptOpenJDK went to great lengths to reconcile Oracle's wishes with the realities of open source. The result is the [Eclipse Temurin Compliance](https://projects.eclipse.org/proposals/eclipse-temurin-compliance) project, which governs access to TCK material and resources. Thanks to the Eclipse Temurin Compliance project, most contributors can continue their work without being impacted by the TCK requirement. We thank Eclipse Foundation's Executive Director Mike Milinkovich and his team for reaching an agreement with Oracle and making this possible.
+
+## The Road Ahead
+
+As soon as the community review has been successfully completed, we intend to set up the projects, processes, and infrastructure. We expect a first formal release of JDK binaries that have passed the respective TCK in H1 2021. It is very well possible that the first releases only include a subset of versions and platforms. We hope to migrate the remainder of versions and platforms until the end of 2021. AdoptOpenJDK will continue to provide updates and new versions until the migration is complete. Afterwards, AdoptOpenJDK will be put into maintenance mode and stop releasing new binaries.
