@@ -18,7 +18,7 @@ AdoptOpenJDK's application to become an Eclipse project was approved under the p
 
 ## Community Review
 
-[Community review](https://www.eclipse.org/projects/dev_process/#6_2_2_Proposal) is an important step towards the creation of the projects. We are looking for your feedback on those proposals to refine and enhance them. If you are already a member of the Eclipse Foundation, please communicate your feedback via the forms on the project pages linked below. Everyone else can [comment on our GitHub issue that collects feedback about our move to the Eclipse Foundation](https://github.com/AdoptOpenJDK/TSC/issues/160).
+The [Community review](https://www.eclipse.org/projects/dev_process/#6_2_2_Proposal) is an important step towards the creation of the projects. We are looking for your feedback on those proposals to refine and enhance them. If you are already a member of the Eclipse Foundation, please communicate your feedback via the forms on the project pages linked below. Everyone else can [comment on our GitHub issue that collects feedback about our move to the Eclipse Foundation](https://github.com/AdoptOpenJDK/TSC/issues/160).
 
 * [Eclipse AQAvit Project Proposal](https://projects.eclipse.org/proposals/eclipse-aqavit)
 * [Eclipse Temurin Project Proposal](https://projects.eclipse.org/proposals/eclipse-temurin)
