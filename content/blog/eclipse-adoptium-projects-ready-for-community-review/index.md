@@ -9,7 +9,7 @@ tags:
   - Foundation
 ---
 
-Six months ago, we announced that AdoptOpenJDK is going to join the Eclipse Foundation and rebrand as Eclipse Adoptium. After a long period of work behind the scenes, the first batch of project proposals is ready for community review. At the Eclipse Foundation, the monolithic AdoptOpenJDK project will be split into multiple sub-projects under the umbrella of the [Eclipse Adoptium Top Level Project](https://projects.eclipse.org/projects/adoptium):
+Six months ago, [we announced](/2020/06/adoptopenjdk-to-join-the-eclipse-foundation/) that AdoptOpenJDK is going to join the [Eclipse Foundation](https://www.eclipse.org) and rebrand as **Eclipse Adoptium**. After a long period of work behind the scenes, the first batch of project proposals is ready for community review. At the Eclipse Foundation, the monolithic AdoptOpenJDK project will be split into multiple sub-projects under the umbrella of the [Eclipse Adoptium Top Level Project](https://projects.eclipse.org/projects/adoptium):
 
 * **Eclipse AQAvit** encompasses all our activities around testing, especially the development of our [AQA test suite](/2019/07/the-first-drop-introducing-adoptopenjdk-quality-assurance-aqa-v1-0/).
 * **Eclipse Temurin** (an anagram of "runtime") focuses on building and releasing JDKs (that part that most associate with AdoptOpenJDK).
