@@ -13,7 +13,9 @@ Six months ago, [we announced](/2020/06/adoptopenjdk-to-join-the-eclipse-foundat
 
 * **Eclipse AQAvit** encompasses all our activities around testing, especially the development of our [AQA test suite](/2019/07/the-first-drop-introducing-adoptopenjdk-quality-assurance-aqa-v1-0/).
 * **Eclipse Temurin** (an anagram of "runtime") focuses on building and releasing JDKs (that part that most folks associate with AdoptOpenJDK). Fun trivia fact is that Temurin is not only an anagram of "runtime" but is also a chemical compound, 1,3,7,9-tetramethyluric acid similar to caffeine with the bonus of being demonstratively non-habituating and clinically safe!
-<img width="321" alt="Screen Shot 2020-12-21 at 12 15 48 PM" src="https://user-images.githubusercontent.com/2836948/102803812-d6999480-4386-11eb-8c5f-33de48705bbe.png">
+
+![Visualization of caffeine and theacrine (temurin) molecules](./temurin.png)
+*Visualization of Caffeine and Theacrine (temurin) molecules (Source: [Wikipedia](https://commons.wikimedia.org/wiki/File:Caffeine_vs_Theacrine.png))* 
 
 AdoptOpenJDK's application to become an Eclipse project was approved under the provision that we only release binaries that have passed the respective TCK. The [TCK for Java SE](https://openjdk.java.net/groups/conformance/JckAccess/) is a proprietary technology of Oracle and must be run confidentially. The Eclipse Foundation and AdoptOpenJDK went to great lengths to reconcile Oracle's requirements with the needs of the Adoptium community. The result is the [Eclipse Temurin Compliance](https://projects.eclipse.org/proposals/eclipse-temurin-compliance) project, which governs access to TCK material and resources. We thank Eclipse Foundation's Executive Director Mike Milinkovich and his team for reaching an agreement with Oracle and making this possible.
 
