@@ -7,7 +7,7 @@ tags:
   - announcement
 ---
 
-Back in the day when everybody got their JDK from Sun and later Oracle, it not only [included the Ask toolbar](https://www.zdnet.com/article/a-close-look-at-how-oracle-installs-deceptive-software-with-java-updates/) (wild times!) but also an [assortment of fonts](https://docs.oracle.com/javase/7/docs/technotes/guides/intl/font.html#lucida) that could be used in addition to the fonts installed on the host. OpenJDK has not bundled any fonts for years (if it ever has), and even [Oracle did away with the bundled fonts starting with Oracle JDK 11](https://www.oracle.com/java/technologies/javase/jdk-11-relnote.html#Removed). Already with OpenJDK 9 [font configuration files were removed except on Windows](https://docs.oracle.com/javase/9/intl/font-configuration-files.htm).
+Back in the day when everybody got their JDK from Sun and later Oracle it included an [assortment of fonts](https://docs.oracle.com/javase/7/docs/technotes/guides/intl/font.html#lucida) that could be used in addition to the fonts installed on the host. OpenJDK has not bundled any fonts for years (if it ever has), and [Oracle did away with the bundled fonts starting with Oracle JDK 11](https://www.oracle.com/java/technologies/javase/jdk-11-relnote.html#Removed). Already with OpenJDK 9 [font configuration files were removed except on Windows](https://docs.oracle.com/javase/9/intl/font-configuration-files.htm).
 
 This has a couple of implications for OpenJDK distributions, including AdoptOpenJDK: Your system might need additional packages and configuration beyond the AdoptOpenJDK installation for proper font support, especially on Linux.
 
