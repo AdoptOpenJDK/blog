@@ -43,7 +43,7 @@ and release updates to our users as usual.  The goal is to transition the home o
 
 In parallel to the technical work we are transferring ownership of our key resources to the Eclipse Foundation.  These resources
 cover a broad range of categories, from cash in the bank to cloud account control, and from domain names to private key secrets.
-By grounding these fundamental project assets in the Eclipse Foundation no single-vendor has control of Adoptium’s future.  We
+By grounding these fundamental project assets in the Eclipse Foundation no single vendor has control of Adoptium’s future.  We
 are passionate about protecting the neutrality of our open source efforts to ensure Adoptium’s runtimes remain secure, open,
 and free for everyone forever.
 
