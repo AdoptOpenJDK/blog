@@ -20,7 +20,7 @@ AdoptOpenJDK is happy to announce the immediate availability of AdoptOpenJDK 16.
 * [JEP 376 brought concurrent thread-stack processing to ZGC](https://openjdk.java.net/jeps/376).
 * [JEP 380 added Unix-domain socket support to channels](https://openjdk.java.net/jeps/380).
 * [JEP 386 landed support for using OpenJDK on Alpine Linux with musl libc instead of glibc](https://openjdk.java.net/jeps/386).
-* [JEP 387 introduced the Elastic Metaspace, which should help to return memory faster to the operating system](https://openjdk.java.net/jeps/386).
+* [JEP 387 introduced the Elastic Metaspace, which should help to return memory faster to the operating system](https://openjdk.java.net/jeps/387).
 * [JEP 388 introduced support for Windows on ARMv8](https://openjdk.java.net/jeps/388).
 * [JEP 389 started the first incubation phase of the Foreign Linker API, making it simpler and safer to interact with native code](https://openjdk.java.net/jeps/389).
 * [JEP 390 brought warnings for value-based classes](https://openjdk.java.net/jeps/390).
