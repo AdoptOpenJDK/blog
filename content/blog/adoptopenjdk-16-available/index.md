@@ -7,7 +7,7 @@ tags:
   - announcement
 ---
 
-AdoptOpenJDK is happy to announce the immediate availability of AdoptOpenJDK 16. Binaries are available for download of OpenJDK and Eclipse OpenJ9 (with OpenJDK class libraries). As always, all binaries are thoroughly tested (except AdoptOpenJDK 16 for Windows on ARM, [see below](#adoptopenjdk-for-windows-on-arm)) and available free of charge without usage restrictions on a wide range of platforms.
+AdoptOpenJDK is happy to announce the immediate availability of AdoptOpenJDK 16. Binaries are available for download of OpenJDK and Eclipse OpenJ9 (with OpenJDK class libraries). As always, all binaries are thoroughly tested and available free of charge without usage restrictions on a wide range of platforms.
 
 * [List of changes in OpenJDK 16](https://bugs.openjdk.java.net/browse/JDK-8263045?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%20%2216%22%20ORDER%20BY%20created%20DESC)
 * [List of changes in Eclipse OpenJ9 0.25.0](https://github.com/eclipse/openj9/blob/master/doc/release-notes/0.25/0.25.md)
@@ -21,7 +21,7 @@ AdoptOpenJDK is happy to announce the immediate availability of AdoptOpenJDK 16.
 * [JEP 380 added Unix-domain socket support to channels](https://openjdk.java.net/jeps/380).
 * [JEP 386 landed support for using OpenJDK on Alpine Linux with musl libc instead of glibc](https://openjdk.java.net/jeps/386).
 * [JEP 387 introduced the Elastic Metaspace, which should help to return memory faster to the operating system](https://openjdk.java.net/jeps/387).
-* [JEP 388 introduced support for Windows on ARMv8](https://openjdk.java.net/jeps/388).
+* [JEP 388 introduced support for Windows on ARMv8](https://openjdk.java.net/jeps/388); a build from AdoptOpenJDK is going to be available soon.
 * [JEP 389 started the first incubation phase of the Foreign Linker API, making it simpler and safer to interact with native code](https://openjdk.java.net/jeps/389).
 * [JEP 390 brought warnings for value-based classes](https://openjdk.java.net/jeps/390).
 * [With JEP 392, jpackage, a tool to create native application packages like an .exe, was promoted to a production feature](https://openjdk.java.net/jeps/392).
@@ -36,10 +36,6 @@ For a complete list of the enhancements (including ones that only impact develop
 ### AdoptOpenJDK for Alpine Linux With musl libc 
 
 [Alpine Linux](https://alpinelinux.org/) is a popular Linux distribution for container workloads because of its small footprint. Contrary to most other Linux distributions, Alpine Linux is not based on the [C library created by the GNU project](https://www.gnu.org/software/libc/) (usually referred to as "glibc") but uses [musl libc](https://musl.libc.org) instead. So far, OpenJDK has not supported musl libc but only glibc. Therefore, we had to add the GNU C library to our container images based on Alpine Linux, which increased the container images' size. With AdoptOpenJDK 16, this is no longer necessary. We now have separate variants of AdoptOpenJDK 16 that are purpose-built for musl libc that can be downloaded as a tarball and are also available as ready-made container images.  
-
-### Preview of AdoptOpenJDK for Windows on ARM<a name="adoptopenjdk-for-windows-on-arm"></a>
-
-Our friends from Microsoft, led by our very own [Martijn Verburg](https://twitter.com/karianna), have ported [OpenJDK to Windows on ARM](https://openjdk.java.net/jeps/388) so that you can run Java (and Java-based applications) natively on your [Surface Pro X](https://www.microsoft.com/en-us/p/surface-pro-x/8qg3bmrhnwhk) or the Lenovo IdeaPad 5G. Therefore, AdoptOpenJDK 16 is now available for Windows on ARM, too, but only as a preview. The reason is that Windows on ARM is a relatively new thing with minimal hardware and software availability. Therefore, we have not yet been able to test it on a regular schedule like we usually do.
 
 ### Removal of 10 Symantec Root Certificates
 
