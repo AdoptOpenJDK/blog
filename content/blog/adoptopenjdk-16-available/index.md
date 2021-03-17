@@ -7,7 +7,7 @@ tags:
   - announcement
 ---
 
-AdoptOpenJDK is happy to announce the immediate availability of AdoptOpenJDK 16. Binaries are available for download of OpenJDK and Eclipse OpenJ9 (with OpenJDK class libraries). As always, all binaries are thoroughly tested and available free of charge without usage restrictions on a wide range of platforms.
+AdoptOpenJDK is happy to announce the immediate availability of AdoptOpenJDK 16. Binaries are available for download of OpenJDK and Eclipse OpenJ9 (with OpenJDK class libraries). As always, all binaries are available free of charge without usage restrictions on a wide range of platforms.
 
 * [List of changes in OpenJDK 16](https://bugs.openjdk.java.net/browse/JDK-8263045?jql=project%20%3D%20JDK%20AND%20fixVersion%20%3D%20%2216%22%20ORDER%20BY%20created%20DESC)
 * [List of changes in Eclipse OpenJ9 0.25.0](https://github.com/eclipse/openj9/blob/master/doc/release-notes/0.25/0.25.md)
