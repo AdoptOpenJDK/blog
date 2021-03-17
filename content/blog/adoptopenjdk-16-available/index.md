@@ -31,7 +31,7 @@ AdoptOpenJDK is happy to announce the immediate availability of AdoptOpenJDK 16.
 * [JEP 396 encapsulates additional JDK internals by default](https://openjdk.java.net/jeps/396).
 * [JEP 397 started the second preview of sealed classes](https://openjdk.java.net/jeps/397).
 
-For a complete list of the enhancements (including ones that only impact developers of OpenJDK), [see the JDK 16 overview over at OpenJDK](http://openjdk.java.net/projects/jdk/16/).
+For a complete list of the enhancements (including ones that only impact developers of OpenJDK), [see the JDK 16 overview over at OpenJDK](https://openjdk.java.net/projects/jdk/16/).
 
 ### AdoptOpenJDK for Alpine Linux With musl libc 
 
