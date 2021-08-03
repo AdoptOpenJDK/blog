@@ -33,7 +33,7 @@ Furthermore, the Eclipse Foundation has secured a license to Oracle’s Java SE 
 
 ### OpenJ9 builds
 
-Part of Eclipse’s agreement [governing](https://projects.eclipse.org/projects/adoptium/governance) the use of the Oracle Java SE TCK, requires that Adoptium does not release OpenJ9-based or GraalVM-based runtimes. We know that OpenJ9 builds were very popular at AdoptOpenJDK, and we are delighted to report that IBM has stepped in to provide equivalent builds directly from their website.
+Part of Eclipse’s agreement [governing](https://projects.eclipse.org/projects/adoptium/governance) the use of the Oracle Java SE TCK, requires that Adoptium does not release OpenJ9-based or GraalVM-based runtimes. We know that OpenJ9 builds were very popular at AdoptOpenJDK, and we are delighted to report that IBM has stepped in to provide [equivalent builds directly from their website](https://ibm.com/semeru-runtimes).
 
 Adoptium has plans to distribute multiple vendor builds of OpenJDK in the near future, so keep an eye on [the Adoptium blog site](https://blog.adoptium.net/) for more information about that exciting adventure.
 
