@@ -39,7 +39,7 @@ Adoptium has plans to distribute multiple vendor builds of OpenJDK in the near f
 
 ### Transitioning to Adoptium Temurin builds
 
-Many people depend upon the [AdoptOpenJDK API](api.adoptopenjdk.net) to retrieve their Java runtimes, so in order to facilitate the smooth transition from AdoptOpenJDK to Adoptium we have created an [Adoptium API](api.adoptium.net) that is directly equivalent to the one you use already. Please migrate to using this new API as soon as possible.
+Many people depend upon the [AdoptOpenJDK API](https://api.adoptopenjdk.net/) to retrieve their Java runtimes, so in order to facilitate the smooth transition from AdoptOpenJDK to Adoptium we have created an [Adoptium API](https://api.adoptium.net/) that is directly equivalent to the one you use already. Please migrate to using this new API as soon as possible.
 
 **For a limited period of time** we will augment the current **AdoptOpenJDK API** to serve binaries built from the Eclipse Adoptium community (Hotspot builds) and IBM (OpenJ9 builds). When you ask the current AdoptOpenJDK API for the latest ‘hotspot’ build by ‘adoptopenjdk’ we will serve you the latest Temurin build, and when you ask for the ‘openj9’ build by ‘adoptopenjdk’ we will serve you the IBM build. The licenses and content of these builds are unchanged. Although arguably that behavior is incorrect for the query, we think that is what most people would expect to get during the transition.
 
