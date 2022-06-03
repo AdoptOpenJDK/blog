@@ -11,7 +11,7 @@ tags:
 
 The move from AdoptOpenJDK to [Eclipse Adoptium](https://projects.eclipse.org/projects/adoptium) is now complete.  The same great community that brought you high quality Java binaries for the last four years at AdoptOpenJDK is now fully productive at [Adoptium](https://github.com/adoptium).
 
-To ensure a smooth transition we will keep the [AdoptOpenJDK website](https://www.adoptopenjdk.net) and the [AdoptOpenJDK API](https://api.adoptopenjdk.net/q/swagger-ui/) active for some time to come, and we are retaining the old [archived AdoptOpenJDK builds](https://adoptopenjdk.net/archive.html) - though we recommend you always use the latest build in production which can now be found at [adoptium.net/releases](https://adoptium.net/releases).
+To ensure a smooth transition we will keep the [AdoptOpenJDK website](https://www.adoptopenjdk.net) and the [AdoptOpenJDK API](https://api.adoptopenjdk.net/q/swagger-ui/) active for some time to come, and we are retaining the old [archived AdoptOpenJDK builds](https://adoptopenjdk.net/archive.html) - though we recommend you always use the latest build in production which can now be found at [adoptium.net/releases](https://adoptium.net/temurin/releases).
 
 A couple of words about changes you may see as you move from AdoptOpenJDK to Adoptium.
 
