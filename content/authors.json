@@ -2,12 +2,12 @@
   "tsc": {
     "name": "Technical Steering Committee",
     "summary": "The AdoptOpenJDK Technical Steering Committee (TSC) ",
-    "twitter": "adoptopenjdk",
+    "twitter": "adoptium",
     "github": "adoptopenjdk"
   },
   "andreasahlenstorf": {
     "name": "Andreas Ahlenstorf",
-    "summary": "Senior researcher at the Zurich University of Applied Sciences, TSC member at AdoptOpenJDK",
+    "summary": "Individual AdoptOpenJDK community contributor",
     "twitter": null,
     "github": "aahlenst"
   },
