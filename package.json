@@ -8,9 +8,9 @@
     "url": "https://github.com/adoptopenjdk/blog/issues"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "6.2.0",
+    "@fortawesome/fontawesome-svg-core": "6.2.1",
     "@fortawesome/free-brands-svg-icons": "6.2.0",
-    "@fortawesome/free-solid-svg-icons": "6.2.0",
+    "@fortawesome/free-solid-svg-icons": "6.2.1",
     "@fortawesome/react-fontawesome": "0.2.0",
     "@mdx-js/mdx": "1.6.22",
     "@mdx-js/react": "1.6.22",
@@ -39,7 +39,7 @@
     "react-dom": "16.14.0",
     "react-helmet": "6.1.0",
     "react-share": "4.4.1",
-    "react-typography": "0.16.20",
+    "react-typography": "0.16.23",
     "typeface-merriweather": "1.1.13",
     "typeface-montserrat": "1.1.13",
     "typography": "0.16.21",
