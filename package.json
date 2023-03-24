@@ -52,7 +52,7 @@
     "eslint-loader": "4.0.2",
     "gatsby-plugin-eslint": "2.0.8",
     "gh-pages": "4.0.0",
-    "prettier": "2.8.6"
+    "prettier": "2.8.7"
   },
   "homepage": "https://blog.adoptopenjdk.net/",
   "keywords": [
