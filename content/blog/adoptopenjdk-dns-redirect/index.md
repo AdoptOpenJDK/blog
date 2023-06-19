@@ -14,7 +14,7 @@ From today, several HTTP redirects have been applied to the adoptopenjdk.net dom
 Yes, the binary download pages will continue to be served up including:
 
 - Latest Releases (albeit nearly always serving Temurin binaries) https://adoptopenjdk.net/releases.html
-- Archive Releease: https://adoptopenjdk.net/archive.html
+- Archive Release: https://adoptopenjdk.net/archive.html
 - API: https://api.adoptopenjdk.net
 
 These redirects are part of a larger initiative to get migrate our remaining users to Eclipse Temurin wherever possible to ensure that they receive the latest security updates.
