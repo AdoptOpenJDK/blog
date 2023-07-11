@@ -8,9 +8,9 @@
     "url": "https://github.com/adoptopenjdk/blog/issues"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "6.2.0",
-    "@fortawesome/free-brands-svg-icons": "6.2.0",
-    "@fortawesome/free-solid-svg-icons": "6.2.0",
+    "@fortawesome/fontawesome-svg-core": "6.4.0",
+    "@fortawesome/free-brands-svg-icons": "6.4.0",
+    "@fortawesome/free-solid-svg-icons": "6.4.0",
     "@fortawesome/react-fontawesome": "0.2.0",
     "@mdx-js/mdx": "1.6.22",
     "@mdx-js/react": "1.6.22",
@@ -20,7 +20,7 @@
     "gatsby-plugin-feed-mdx": "1.1.0",
     "gatsby-plugin-google-analytics": "2.11.0",
     "gatsby-plugin-manifest": "2.12.1",
-    "gatsby-plugin-mdx": "2.14.2",
+    "gatsby-plugin-mdx": "2.15.0",
     "gatsby-plugin-offline": "3.10.2",
     "gatsby-plugin-react-helmet": "3.10.0",
     "gatsby-plugin-sharp": "2.14.4",
@@ -39,10 +39,10 @@
     "react-dom": "16.14.0",
     "react-helmet": "6.1.0",
     "react-share": "4.4.1",
-    "react-typography": "0.16.20",
+    "react-typography": "0.16.23",
     "typeface-merriweather": "1.1.13",
     "typeface-montserrat": "1.1.13",
-    "typography": "0.16.21",
+    "typography": "0.16.24",
     "typography-theme-wordpress-2016": "0.16.19"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "eslint-loader": "4.0.2",
     "gatsby-plugin-eslint": "2.0.8",
     "gh-pages": "4.0.0",
-    "prettier": "2.7.1"
+    "prettier": "3.0.0"
   },
   "homepage": "https://blog.adoptopenjdk.net/",
   "keywords": [
