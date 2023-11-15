@@ -12,7 +12,7 @@
     "@fortawesome/free-brands-svg-icons": "6.4.2",
     "@fortawesome/free-solid-svg-icons": "6.4.2",
     "@fortawesome/react-fontawesome": "0.2.0",
-    "@mdx-js/react": "3.0.0",
+    "@mdx-js/react": "2.3.0",
     "darkmode-js": "1.5.7",
     "gatsby": "5.12.9",
     "gatsby-plugin-feed": "5.12.3",
@@ -48,7 +48,7 @@
     "babel-preset-gatsby": "3.12.1",
     "eslint": "8.53.0",
     "eslint-config-react-app": "7.0.1",
-    "eslint-loader": "4.0.2",
+    "eslint-webpack-plugin": "4.0.1",
     "gatsby-plugin-eslint": "4.0.4",
     "prettier": "3.0.3"
   },
