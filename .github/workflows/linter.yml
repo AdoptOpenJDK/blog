@@ -22,4 +22,6 @@ jobs:
       run: |
         npm install
         npm run lint
-        gatsby build
+    
+    - name: Build
+      run: npm run build
