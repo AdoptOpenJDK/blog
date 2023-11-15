@@ -1,3 +1,5 @@
+[![Deploy to GitHub Pages](https://github.com/AdoptOpenJDK/blog/actions/workflows/deploy-to-gh-pages.yml/badge.svg)](https://github.com/AdoptOpenJDK/blog/actions/workflows/deploy-to-gh-pages.yml)
+
 # AdoptOpenJDK Blog
 
 This is the source of the [AdoptOpenJDK blog](https://blog.adoptopenjdk.net/).
