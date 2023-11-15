@@ -1,12 +1,25 @@
-const path = require("path");
-const fs = require("fs");
-const fetch = require("node-fetch");
+import path from 'path'
+import fetch from 'node-fetch'
+import fs from 'fs'
 
-const { pipeline } = require("stream");
-const { promisify } = require("util");
-const { createFilePath } = require("gatsby-source-filesystem");
+import { pipeline } from 'stream'
+import { promisify } from 'util'
+import { createFilePath } from 'gatsby-source-filesystem'
 
-exports.createPages = async ({ graphql, actions }) => {
+import type { GatsbyNode, Node } from 'gatsby'
+
+interface MdxNode extends Node {
+  frontmatter: {
+    date: string;
+  };
+  fields: {
+    slug: string;
+    gitSHA?: string;
+  }
+}
+
+export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions }) => {
+
   const { createPage } = actions;
 
   const authorJson = require("./content/authors.json");
@@ -37,10 +50,33 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const tagTemplate = path.resolve("./src/templates/tag-page.js");
   const blogPost = path.resolve("./src/templates/blog-post.js");
-  const result = await graphql(
+  const result = await graphql<{
+    allMdx: {
+      edges: Array<{
+        node: {
+          fields: {
+            slug: string;
+            postPath: string;
+          };
+          frontmatter: {
+            title: string;
+            tags: string[];
+          };
+          internal: {
+            contentFilePath: string;
+          };
+        };
+      }>;
+    };
+    tagsGroup: {
+      group: Array<{
+        fieldValue: string;
+      }>;
+    };
+  }>(
     `
       {
-        allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+        allMdx(sort: {frontmatter: {date: DESC}}) {
           edges {
             node {
               fields {
@@ -51,20 +87,27 @@ exports.createPages = async ({ graphql, actions }) => {
                 title
                 tags
               }
+              internal {
+                contentFilePath
+              }
             }
           }
         }
         tagsGroup: allMdx(limit: 2000) {
-          group(field: frontmatter___tags) {
+          group(field: {frontmatter: {tags: SELECT}}) {
             fieldValue
           }
         }
       }
     `
-  );
+  )
 
   if (result.errors) {
     throw result.errors;
+  }
+
+  if (!result.data) {
+    throw new Error("Error retrieving blog posts");
   }
 
   const posts = result.data.allMdx.edges;
@@ -75,7 +118,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: `${post.node.fields.postPath}`,
-      component: blogPost,
+      component: `${blogPost}?__contentFilePath=${post.node.internal.contentFilePath}`,
       context: {
         slug: post.node.fields.slug,
         postPath: post.node.fields.postPath,
@@ -123,12 +166,13 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 };
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+export const onCreateNode: GatsbyNode['onCreateNode'] = async ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === "Mdx") {
     const slug = createFilePath({ node, getNode });
-    const date = new Date(node.frontmatter.date);
+    const mdxNode = node as MdxNode
+    const date = new Date(mdxNode.frontmatter.date);
     const year = date.getFullYear();
     const zeroPaddedMonth = `${date.getMonth() + 1}`.padStart(2, "0");
 

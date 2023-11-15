@@ -1,6 +1,6 @@
 ---
 title: Why GitHub Releases?
-date: 2017-08-04T15:45:21+00:00
+date: "2017-08-04T15:45:21+00:00"
 author: georgeadams
 description: "There are many advantages for us to using GitHub Releases for AdoptOpenJDK."
 tags:

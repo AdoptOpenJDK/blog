@@ -58,8 +58,8 @@ export const tagsPageQuery = graphql`
       }
     }
     allMdx(
-        filter: {frontmatter: {tags: {eq: $tag}}}
-        sort: { fields: [frontmatter___date], order: DESC }
+      filter: {frontmatter: {tags: {eq: $tag}}}
+      sort: {frontmatter: {date: DESC}}
     ) {
         edges {
         node {

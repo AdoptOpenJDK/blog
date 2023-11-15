@@ -57,7 +57,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-feed-mdx",
+      resolve: "gatsby-plugin-feed",
       options: {
         query: `
           {
@@ -87,7 +87,7 @@ module.exports = {
             query: `
               {
                 allMdx(
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: {frontmatter: {date: DESC}},
                   limit: 10
                 ) {
                   edges {

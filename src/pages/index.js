@@ -65,10 +65,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 10
-    ) {
+    allMdx(sort: {frontmatter: {date: DESC}}, limit: 10) {
       totalCount
       edges {
         node {

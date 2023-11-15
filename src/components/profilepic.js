@@ -1,8 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Image from "gatsby-image";
-
-import { rhythm } from "../utils/typography";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const ProfilePic = (props) => {
   const data = useStaticQuery(graphql`
@@ -12,27 +10,29 @@ const ProfilePic = (props) => {
           node {
             name
             childImageSharp {
-              fixed(width: 50, height: 50) {
-                ...GatsbyImageSharpFixed
-              }
-            }        
+              gatsbyImageData(
+                layout: FIXED
+                width: 50
+                height: 50
+              )
+            }
           }
         }
       }
     }
   `);
 
-  const profilePic = data.avatar.edges.find(item => item.node.name === props.identifier);
-  if (!profilePic) {
+  const profilePicImg = data.avatar.edges.find(item => item.node.name === props.identifier);
+  if (!profilePicImg) {
     return null;
   }
 
   return (
-    <Image
-      fixed={profilePic.node.childImageSharp.fixed}
+    <GatsbyImage
+      image={profilePicImg.node.childImageSharp.gatsbyImageData}
       alt={props.name}
       style={{
-        marginRight: rhythm(1 / 2),
+        marginRight: "0.5rem",
         marginBottom: 0,
         minWidth: 50,
         borderRadius: "100%",
