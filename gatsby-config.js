@@ -80,20 +80,15 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.postPath,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.postPath,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
                 });
               });
             },
             query: `
               {
-                allMdx(
-                  sort: {frontmatter: {date: DESC}},
-                  limit: 10
-                ) {
+                allMdx(sort: {frontmatter: {date: DESC}}, limit: 100) {
                   edges {
                     node {
                       excerpt
-                      html
                       fields {
                         slug
                         postPath
