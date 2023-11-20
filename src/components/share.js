@@ -1,7 +1,7 @@
 import React from "react";
 import {
   TwitterShareButton,
-  TwitterIcon,
+  XIcon,
   EmailShareButton,
   EmailIcon,
   FacebookShareButton,
@@ -26,7 +26,7 @@ const ShareButton = (props) => {
   return (
     <>
       <TwitterShareButton url={url} quote={url} title={post.title} hashtags={post.tags} related={twitter} style={iconStyle}>
-        <TwitterIcon size={iconSize}/>
+        <XIcon size={iconSize}/>
       </TwitterShareButton>
 
       <LinkedinShareButton url={url} title={post.title} quote={url} source={siteMetadata.siteUrl} style={iconStyle}>
