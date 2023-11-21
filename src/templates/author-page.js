@@ -51,10 +51,9 @@ export default AuthorPage;
 
 export const Head = ({ pageContext }) => {
   const author = AuthorData[pageContext.author];
-  const { currentPageNumber } = pageContext;
   return (
     <SEO
-      title={currentPageNumber === 1 ? author.name : `${author.name} - Page ${currentPageNumber}`}
+      title={author.name}
       description={author.summary}
     />
   );
