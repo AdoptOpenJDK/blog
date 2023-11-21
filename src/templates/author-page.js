@@ -17,10 +17,6 @@ const AuthorPage = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
-        title={author.name}
-        description={author.summary}
-      />
       <h1>{author.name}</h1>
       <AuthorBio identifier={pageContext.author} author={author} />
 
@@ -52,6 +48,17 @@ const AuthorPage = ({ data, pageContext, location }) => {
 };
 
 export default AuthorPage;
+
+export const Head = ({ pageContext }) => {
+  const author = AuthorData[pageContext.author];
+  const { currentPageNumber } = pageContext;
+  return (
+    <SEO
+      title={currentPageNumber === 1 ? author.name : `${author.name} - Page ${currentPageNumber}`}
+      description={author.summary}
+    />
+  );
+};
 
 export const authorPageQuery = graphql`
   query authorPageQuery($author: String!, $limit: Int!) {

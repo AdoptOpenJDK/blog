@@ -13,7 +13,6 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title;
         const author = AuthorData[node.frontmatter.author];
@@ -57,6 +56,10 @@ const BlogIndex = ({ data, location }) => {
 };
 
 export default BlogIndex;
+
+export const Head = () => (
+  <SEO title="All Posts" />
+);
 
 export const pageQuery = graphql`
   query {
