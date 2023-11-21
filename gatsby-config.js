@@ -48,6 +48,7 @@ module.exports = {
     },
     "gatsby-remark-images",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-google-analytics",
@@ -121,7 +122,6 @@ module.exports = {
         icon: "content/assets/favicon.png",
       },
     },
-    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-typography",
       options: {

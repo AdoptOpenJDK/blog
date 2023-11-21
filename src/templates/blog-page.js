@@ -9,12 +9,11 @@ import ArticlePreview from "../components/articlepreview";
 const BlogPage = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMdx.edges;
-  const { currentPageNumber, previousPageNumber, nextPageNumber } = pageContext;
+  const { previousPageNumber, nextPageNumber } = pageContext;
   const previousPageLink = previousPageNumber === 1 ? "/" : `/page/${previousPageNumber}`;
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title={`All posts – Page ${currentPageNumber}`} />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title;
         const author = AuthorData[node.frontmatter.author];
@@ -64,6 +63,15 @@ const BlogPage = ({ data, pageContext, location }) => {
 };
 
 export default BlogPage;
+
+export const Head = ({ pageContext }) => {
+  const { currentPageNumber } = pageContext;
+  return (
+    <SEO
+      title={`All posts – Page ${currentPageNumber}`}
+    />
+  );
+};
 
 export const blogPageQuery = graphql`
   query blogPageQuery($skip: Int!, $limit: Int!) {
