@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "babel-eslint": "10.1.0",
-    "babel-preset-gatsby": "3.12.1",
+    "babel-preset-gatsby": "3.13.0",
     "eslint": "8.56.0",
     "eslint-config-react-app": "7.0.1",
     "eslint-webpack-plugin": "4.0.1",
