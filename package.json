@@ -14,7 +14,7 @@
     "@fortawesome/react-fontawesome": "0.2.1",
     "@mdx-js/react": "2.3.0",
     "darkmode-js": "1.5.7",
-    "gatsby": "5.13.4",
+    "gatsby": "5.13.5",
     "gatsby-plugin-feed": "5.13.1",
     "gatsby-plugin-google-analytics": "5.13.1",
     "gatsby-plugin-image": "3.13.1",
