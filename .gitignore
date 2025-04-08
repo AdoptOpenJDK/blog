@@ -70,3 +70,6 @@ yarn-error.log
 
 # IntelliJ IDE config
 .idea/
+
+# VSCode Config
+.vscode/
