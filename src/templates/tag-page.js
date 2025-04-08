@@ -15,10 +15,6 @@ const Tags = ({ pageContext, data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
-        title={pageContext.tag}
-        description={pageContext.tag}
-      />
       <h1>{pageContext.tag}</h1>
 
       <hr
@@ -50,6 +46,15 @@ const Tags = ({ pageContext, data, location }) => {
 
 export default Tags;
 
+export const Head = ({ pageContext }) => {
+  return (
+    <SEO
+      title={pageContext.tag}
+      description={pageContext.tag}
+    />
+  );
+};
+
 export const tagsPageQuery = graphql`
   query tagsPageQuery($tag: String!) {
     site {
@@ -58,8 +63,8 @@ export const tagsPageQuery = graphql`
       }
     }
     allMdx(
-        filter: {frontmatter: {tags: {eq: $tag}}}
-        sort: { fields: [frontmatter___date], order: DESC }
+      filter: {frontmatter: {tags: {eq: $tag}}}
+      sort: {frontmatter: {date: DESC}}
     ) {
         edges {
         node {

@@ -13,7 +13,6 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title;
         const author = AuthorData[node.frontmatter.author];
@@ -58,6 +57,10 @@ const BlogIndex = ({ data, location }) => {
 
 export default BlogIndex;
 
+export const Head = () => (
+  <SEO title="All Posts" />
+);
+
 export const pageQuery = graphql`
   query {
     site {
@@ -65,10 +68,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 10
-    ) {
+    allMdx(sort: {frontmatter: {date: DESC}}, limit: 10) {
       totalCount
       edges {
         node {

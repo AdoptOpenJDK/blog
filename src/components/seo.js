@@ -24,12 +24,11 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 const adoptSocialImage = require("../images/social-image.png");
 
-const SEO = ({ description, lang, meta, title, twitterCard }) => {
+const SEO = ({ title, description, twitterCard }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -47,66 +46,31 @@ const SEO = ({ description, lang, meta, title, twitterCard }) => {
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
+  const siteTitle = title + " | AdoptOpenJDK";
+
+  if (!description) {
+    description = site.siteMetadata.description;
+  }
 
   if (twitterCard == null) {
     twitterCard = adoptSocialImage;
   }
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: "description",
-          content: metaDescription,
-        },
-        {
-          property: "og:title",
-          content: title,
-        },
-        {
-          property: "og:description",
-          content: metaDescription,
-        },
-        {
-          property: "og:image",
-          content: site.siteMetadata.siteUrl + twitterCard,
-        },
-        {
-          property: "og:type",
-          content: "website",
-        },
-        {
-          name: "twitter:card",
-          content: "summary_large_image",
-        },
-        {
-          name: "twitter:creator",
-          content: site.siteMetadata.social.twitter,
-        },
-        {
-          name: "twitter:site",
-          content: site.siteMetadata.social.twitter,
-        },
-        {
-          name: "twitter:title",
-          content: title,
-        },
-        {
-          name: "twitter:description",
-          content: metaDescription,
-        },
-        {
-          name: "twitter:image",
-          content: site.siteMetadata.siteUrl + twitterCard,
-        },
-      ].concat(meta)}
-    />
+    <>
+      <title>{siteTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="og:title" content={siteTitle} />
+      <meta name="og:description" content={description} />
+      <meta name="og:type" content="website" />
+      <meta name="og:image" content={site.siteMetadata.siteUrl + "/" + twitterCard} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@adoptopenjdk" />
+      <meta name="twitter:image" content={site.siteMetadata.siteUrl + "/" + twitterCard} />
+      <meta name="twitter:creator" content="@adoptopenjdk" />
+      <meta name="twitter:title" content={siteTitle} />
+      <meta name="twitter:description" content={description} />
+    </>
   );
 };
 
@@ -114,13 +78,11 @@ SEO.defaultProps = {
   lang: "en",
   meta: [],
   description: "",
+  title: "AdoptOpenJDK",
 };
 
 SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 export default SEO;

@@ -32,23 +32,27 @@ In order to work around this, we have had to enable hardened runtime on our bina
 
 This requires us to add --options runtime to the codesign command. It also requires us to enable the following entitlements:
 
-    <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0">
-    <dict>    
-      <key>com.apple.security.cs.allow-jit</key>
-      <true/>
-      <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
-      <true/>            
-      <key>com.apple.security.cs.disable-executable-page-protection</key>
-      <true/>
-      <key>com.apple.security.cs.allow-dyld-environment-variables</key>
-      <true/> 
-    </dict>
-    </plist>
+```xml
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0">
+<dict>    
+  <key>com.apple.security.cs.allow-jit</key>
+  <true/>
+  <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
+  <true/>            
+  <key>com.apple.security.cs.disable-executable-page-protection</key>
+  <true/>
+  <key>com.apple.security.cs.allow-dyld-environment-variables</key>
+  <true/> 
+</dict>
+</plist>
+```
 
 ### Why can’t I bundle OpenJDK8?
 
 If you try and bundle our OpenJDK8 binaries you will receive the following notarization failure:
 
-    "message": "The binary uses an SDK older than the 10.9 SDK.",
+```output
+"message": "The binary uses an SDK older than the 10.9 SDK.",
+```
 
 This is because OpenJDK8 is designed to be built on a much older toolchain. We will work closely with the wider community to get a fix that allows OpenJDK8 to be built on a newer version of Xcode. As soon as this is ready we will be able to build an OpenJDK8 hardened runtime enabled binary.

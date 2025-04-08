@@ -1,38 +1,38 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Image from "gatsby-image";
-
-import { rhythm } from "../utils/typography";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const ProfilePicInline = (props) => {
   const data = useStaticQuery(graphql`
-    query ProfilePicQueryInline {
+    query ProfilePicInlineQuery {
       avatar: allFile(filter: { absolutePath: { regex: "/authors/" } }) {
         edges {
           node {
             name
             childImageSharp {
-              fixed(width: 30, height: 30) {
-                ...GatsbyImageSharpFixed
-              }
-            }        
+              gatsbyImageData(
+                layout: FIXED
+                width: 30
+                height: 30
+              )
+            }
           }
         }
       }
     }
   `);
 
-  const profilePic = data.avatar.edges.find(item => item.node.name === props.identifier);
-  if (!profilePic) {
+  const profilePicImg = data.avatar.edges.find(item => item.node.name === props.identifier);
+  if (!profilePicImg) {
     return null;
   }
 
   return (
-    <Image
-      fixed={profilePic.node.childImageSharp.fixed}
+    <GatsbyImage
+      image={profilePicImg.node.childImageSharp.gatsbyImageData}
       alt={props.name}
       style={{
-        marginLeft: rhythm(1 / 2),
+        marginLeft: "0.5rem",
         marginBottom: 0,
         minWidth: 30,
         borderRadius: "100%",

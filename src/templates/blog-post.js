@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 
 import Layout from "../components/layout";
@@ -18,26 +17,15 @@ const components = {
   GuestPost
 };
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+const BlogPostTemplate = ({ data, pageContext, location, children }) => {
   const post = data.mdx;
   const siteTitle = data.site.siteMetadata.title;
   const { previous, next } = pageContext;
   const author = AuthorData[post.frontmatter.author];
   const tags = post.frontmatter.tags;
 
-  let twitterCard = null;
-
-  if (post.frontmatter && post.frontmatter.featuredImage) {
-    twitterCard = post.frontmatter.featuredImage.childImageSharp.sizes.src;
-  }
-
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-        twitterCard={twitterCard}
-      />
       <article>
         <header>
           <h1
@@ -55,7 +43,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <ShareButton location={location} siteMetadata={data.site.siteMetadata} post={post.frontmatter}/>
         </header>
         <MDXProvider components={components}>
-          <MDXRenderer>{post.body}</MDXRenderer>
+          {children}
         </MDXProvider>
         <Tags tags={tags}/>
         <Comments/>
@@ -102,6 +90,22 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
 export default BlogPostTemplate;
 
+export const Head = ({ data }) => {
+  const post = data.mdx;
+  let twitterCard = "";
+
+  if (post.frontmatter && post.frontmatter.featuredImage) {
+    twitterCard = post.frontmatter.featuredImage.childImageSharp.gatsbyImageData.images.fallback.src;
+  }
+  return (
+    <SEO
+      title={post.frontmatter.title}
+      description={post.frontmatter.description || post.excerpt}
+      twitterCard={twitterCard}
+    />
+  );
+};
+
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
@@ -125,9 +129,9 @@ export const pageQuery = graphql`
         tags
         featuredImage {
           childImageSharp {
-            sizes(maxWidth: 630) {
-              ...GatsbyImageSharpSizes
-            }
+            gatsbyImageData (
+              layout: FIXED
+            )
           }
         }
         tags

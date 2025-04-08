@@ -12,17 +12,16 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v4
 
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v4
       with:
-        node-version: '14'
-        
-    - name: Install Gatsby CLI
-      run: npm install -g gatsby-cli
+        node-version: '20'
 
     - name: Lint
       run: |
         npm install
         npm run lint
-        gatsby build
+    
+    - name: Build
+      run: npm run build
