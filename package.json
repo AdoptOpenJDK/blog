@@ -46,7 +46,7 @@
     "babel-preset-gatsby": "3.14.0",
     "eslint": "8.57.1",
     "eslint-config-react-app": "7.0.1",
-    "eslint-webpack-plugin": "4.2.0",
+    "eslint-webpack-plugin": "5.0.2",
     "gatsby-plugin-eslint": "4.0.4",
     "prettier": "3.6.2"
   },
