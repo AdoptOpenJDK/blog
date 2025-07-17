@@ -71,5 +71,8 @@ yarn-error.log
 # IntelliJ IDE config
 .idea/
 
-# VSCode Config
+# VS Code Config
 .vscode/
+
+# GH Copilot Instructions
+.github/copilot-instructions.md
