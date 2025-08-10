@@ -15,7 +15,7 @@ Some changes have been made to the way we codesign our macOS binaries.
 
 ## Summary
 
-Apple has recently changed the requirements for applications to install on macOS 10.15 and above. The change requires developers to notarize the application before it gets shipped. Notarization involves submitting the application to Apple to be scanned and generates a JSON report with any issues. More information about notarization can be found [here](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution).
+Apple has recently changed the requirements for applications to install on macOS 10.15 and above. The change requires developers to notarize the application before it gets shipped. Notarization involves submitting the application to Apple to be scanned and generates a JSON report with any issues. More information about notarization can be found in [Apple’s docs on notarization](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution).
 
 ## What’s changed?
 
@@ -25,8 +25,10 @@ We have enabled hardened runtime on our macOS binaries which will allow them to 
 
 We had multiple bug reports from users saying that when they bundle AdoptOpenJDK binaries into their applications, the notarization fails with multiple errors such as the ones below:
 
-    “message”: “The signature algorithm used is too weak.”,
-    “message”: “The executable does not have the hardened runtime enabled.”,
+```text
+“message”: “The signature algorithm used is too weak.”,
+“message”: “The executable does not have the hardened runtime enabled.”,
+```
 
 In order to work around this, we have had to enable hardened runtime on our binaries when we codesign them.
 
@@ -51,7 +53,7 @@ This requires us to add --options runtime to the codesign command. It also requi
 
 If you try and bundle our OpenJDK8 binaries you will receive the following notarization failure:
 
-```output
+```text
 "message": "The binary uses an SDK older than the 10.9 SDK.",
 ```
 
