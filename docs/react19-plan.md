@@ -1,6 +1,6 @@
 # React 19 upgrade plan (tracking)
 
-Status: Blocked by Gatsby 5 peer dependency on React ^18.
+Status: [Blocked by Gatsby 5 peer dependency on React ^18](https://github.com/gatsbyjs/gatsby/issues/39180)
 
 Phases
 
@@ -8,7 +8,7 @@ Phases
 
 2) Align MDX ecosystem: gatsby-plugin-mdx to matching major, @mdx-js/react v3, gatsby-remark-* majors.
 
-3) Upgrade react/react-dom to 19.1.0. Validate SSR/hydration across pages.
+3) Upgrade react/react-dom to 19.1.1+. Validate SSR/hydration across pages.
 
 Done
 

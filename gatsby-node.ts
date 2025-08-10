@@ -31,9 +31,9 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
       if (!response.ok) {
         throw new Error(`Unexpected response: ${response.statusText}`);
       }
-  const arrayBuf = await response.arrayBuffer();
-  const uint8 = new Uint8Array(arrayBuf);
-  await fs.promises.writeFile(`content/assets/authors/${author}.jpg`, uint8);
+      const arrayBuf = await response.arrayBuffer();
+      const uint8 = new Uint8Array(arrayBuf);
+      await fs.promises.writeFile(`content/assets/authors/${author}.jpg`, uint8);
     }
 
     createPage({
