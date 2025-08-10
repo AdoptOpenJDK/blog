@@ -32,8 +32,8 @@
     "gatsby-transformer-sharp": "5.14.0",
     "glamor": "2.20.40",
     "prismjs": "1.30.0",
-  "react": "18.3.1",
-  "react-dom": "18.3.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-share": "5.2.2",
     "react-typography": "0.16.23",
     "typeface-merriweather": "1.1.13",
@@ -72,7 +72,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-  "test": "npm run lint && npm run build",
-  "check:compat": "node -e \"console.log('gatsby peers:', require('child_process').execSync('npm view gatsby peerDependencies',{stdio:'pipe'}).toString())\""
+    "test": "npm run lint && npm run build",
+    "check:compat": "node -e \"console.log('gatsby peers:', require('child_process').execSync('npm view gatsby peerDependencies',{stdio:'pipe'}).toString())\""
   }
 }
