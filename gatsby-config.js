@@ -46,15 +46,16 @@ module.exports = {
         ],
       },
     },
-    "gatsby-remark-images",
+    // Note: gatsby-remark-images is configured via
+    // gatsby-plugin-mdx's gatsbyRemarkPlugins
     "gatsby-transformer-sharp",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: "UA-99905649-2",
-        anonymize: true,
+        trackingIds: ["UA-99905649-2"],
+        gtagConfig: { anonymize_ip: true },
       },
     },
     {
