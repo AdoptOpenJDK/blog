@@ -1,9 +1,5 @@
 import path from 'path'
-import fetch from 'node-fetch'
 import fs from 'fs'
-
-import { pipeline } from 'stream'
-import { promisify } from 'util'
 import { createFilePath } from 'gatsby-source-filesystem'
 
 import type { GatsbyNode, Node } from 'gatsby'
@@ -30,12 +26,14 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
       await fs.promises.access(`content/assets/authors/${author}.jpg`);
     } catch (error) {
       const githubUsername = authorJson[author].github;
-      const streamPipeline = promisify(pipeline);
+      // Use Node 18+ global fetch to download the avatar without additional deps
       const response = await fetch(`https://github.com/${githubUsername}.png?size=250`);
       if (!response.ok) {
         throw new Error(`Unexpected response: ${response.statusText}`);
       }
-      await streamPipeline(response.body, fs.createWriteStream(`content/assets/authors/${author}.jpg`));
+      const arrayBuf = await response.arrayBuffer();
+      const uint8 = new Uint8Array(arrayBuf);
+      await fs.promises.writeFile(`content/assets/authors/${author}.jpg`, uint8);
     }
 
     createPage({

@@ -12,7 +12,6 @@
       "noImplicitReturns": true,
       "strict": true,
       "strictFunctionTypes": true,
-      "suppressImplicitAnyIndexErrors": true,
       "noUnusedLocals": true,
       "pretty": true,
       "allowSyntheticDefaultImports": true,
@@ -30,6 +29,7 @@
       ]
     },
     "include": [
-      "**/*.{ts,tsx,mdx}",
+      "**/*.ts",
+      "**/*.tsx"
     ]
   }
