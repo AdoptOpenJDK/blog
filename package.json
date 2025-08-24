@@ -44,7 +44,7 @@
   "devDependencies": {
     "babel-eslint": "10.1.0",
     "babel-preset-gatsby": "3.14.0",
-    "eslint": "8.57.1",
+    "eslint": "9.34.0",
     "eslint-config-react-app": "7.0.1",
     "eslint-webpack-plugin": "4.2.0",
     "gatsby-plugin-eslint": "4.0.4",
