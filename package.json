@@ -48,7 +48,7 @@
     "eslint-config-react-app": "7.0.1",
     "eslint-webpack-plugin": "4.2.0",
     "gatsby-plugin-eslint": "4.0.4",
-    "prettier": "3.7.3"
+    "prettier": "3.7.4"
   },
   "homepage": "https://blog.adoptopenjdk.net/",
   "keywords": [
