@@ -1,0 +1,144 @@
+const path = require('path');
+const fs = require('fs');
+const { createFilePath } = require('gatsby-source-filesystem');
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+
+  const authorJson = require('./content/authors.json');
+  const authorPage = path.resolve('./src/templates/author-page.js');
+
+  for (let author of Object.keys(authorJson)) {
+    try {
+      await fs.promises.access(`content/assets/authors/${author}.jpg`);
+    } catch (error) {
+      const githubUsername = authorJson[author].github;
+      const response = await fetch(`https://github.com/${githubUsername}.png?size=250`);
+      if (!response.ok) {
+        throw new Error(`Unexpected response: ${response.statusText}`);
+      }
+      const arrayBuf = await response.arrayBuffer();
+      const uint8 = new Uint8Array(arrayBuf);
+      await fs.promises.writeFile(`content/assets/authors/${author}.jpg`, uint8);
+    }
+
+    createPage({
+      path: `/author/${author}`,
+      component: authorPage,
+      context: {
+        author: author,
+        limit: 10,
+      },
+    });
+  }
+
+  const tagTemplate = path.resolve('./src/templates/tag-page.js');
+  const blogPost = path.resolve('./src/templates/blog-post.js');
+  const result = await graphql(`
+      {
+        allMdx(sort: {frontmatter: {date: DESC}}) {
+          edges {
+            node {
+              fields {
+                slug
+                postPath
+              }
+              frontmatter {
+                title
+                tags
+              }
+              internal {
+                contentFilePath
+              }
+            }
+          }
+        }
+        tagsGroup: allMdx(limit: 2000) {
+          group(field: {frontmatter: {tags: SELECT}}) {
+            fieldValue
+          }
+        }
+      }
+    `);
+
+  if (result.errors) {
+    throw result.errors;
+  }
+
+  if (!result.data) {
+    throw new Error('Error retrieving blog posts');
+  }
+
+  const posts = result.data.allMdx.edges;
+
+  posts.forEach((post, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node;
+    const next = index === 0 ? null : posts[index - 1].node;
+
+    createPage({
+      path: `${post.node.fields.postPath}`,
+      component: `${blogPost}?__contentFilePath=${post.node.internal.contentFilePath}`,
+      context: {
+        slug: post.node.fields.slug,
+        postPath: post.node.fields.postPath,
+        previous,
+        next,
+      },
+    });
+  });
+
+  const tags = result.data.tagsGroup.group;
+
+  tags.forEach((tag) => {
+    createPage({
+      path: `/tags/${tag.fieldValue}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
+      },
+    });
+  });
+
+  const postsPerPage = 10;
+  const numPages = Math.ceil(posts.length / postsPerPage);
+  Array.from({ length: numPages }).forEach((_, index) => {
+    const currentPageNumber = index + 1;
+    const previousPageNumber = currentPageNumber === 1 ? null : currentPageNumber - 1;
+    const nextPageNumber = currentPageNumber === numPages ? null : currentPageNumber + 1;
+
+    createPage({
+      path: `/page/${index + 1}`,
+      component: path.resolve('./src/templates/blog-page.js'),
+      context: {
+        limit: postsPerPage,
+        skip: index * postsPerPage,
+        numPages,
+        currentPageNumber,
+        previousPageNumber,
+        nextPageNumber,
+      },
+    });
+  });
+};
+
+exports.onCreateNode = async ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === 'Mdx') {
+    const slug = createFilePath({ node, getNode });
+    const date = new Date(node.frontmatter.date);
+    const year = date.getFullYear();
+    const zeroPaddedMonth = `${date.getMonth() + 1}`.padStart(2, '0');
+
+    createNodeField({
+      name: 'slug',
+      node,
+      value: slug,
+    });
+    createNodeField({
+      name: 'postPath',
+      node,
+      value: `/${year}/${zeroPaddedMonth}${slug}`,
+    });
+  }
+};
