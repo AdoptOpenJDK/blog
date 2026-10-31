@@ -47,7 +47,7 @@ Our CSS will take care of rendering it correctly by looking for `img + em`.
 
 Example:
 
-       ![Photo depiciting a drop of water](./clean-drop-of-water-liquid.jpg)
+       ![Photo depicting a drop of water](./clean-drop-of-water-liquid.jpg)
        *AQA v1.0  is a first drop in an on-going series of improvements.*
 
 ### Quotes
